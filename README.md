@@ -4,6 +4,7 @@ vk-exclude-audio
 Userscript which helps to exclude unwanted songs from audio search results on VK.com.
 
 Usage:
+
 Type keywords separated by space into "Exclude" field to exclude unwanted songs from search results.
 Example: "cover remix drum-n-bass" will exclude songs of performers containing words "cover", "remix" or "drum-n-bass".
 
