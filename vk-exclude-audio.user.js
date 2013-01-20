@@ -63,11 +63,6 @@ function bindFieldEvents(field){
     });
 };
 
-function initialize(){
-    var field = createExcludeField(excludeFieldConfig);
-    bindFieldEvents(field);
-};
-
 function filterSongs(expressions){
     toArray(getEl('.audio.fl_l')).forEach(function(songElement){
         var performer = trimTags( getEl('.title_wrap.fl_l > b > a:first-child', songElement).innerHTML );
@@ -148,3 +143,12 @@ function parseQuery(query){
     };
 
 };
+
+function initialize(){
+    if ( location.hostname === 'vk.com' || location.hostname === 'vkontakte.ru' ) { // TODO: initialize when Music is opened
+        var field = createExcludeField(excludeFieldConfig);
+        bindFieldEvents(field);
+    }
+};
+
+initialize();
