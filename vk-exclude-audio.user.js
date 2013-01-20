@@ -1,8 +1,8 @@
 var excludeFieldConfig = {
-    type: 'type',
+    type: 'text',
     id: 'vk_audio_exclude',
     placeholder: 'Exclude',
-    style: ''
+    style: '' // TODO: finish CSS
 };
 
 function getEl(selector, container){
@@ -22,11 +22,8 @@ function trim(str){
 };
 
 function trimTags(str){
-    return str.replace(/(<([^>]+)>)/ig, '');
+    return str.replace(/(<[^>]+>)/ig, '');
 };
-
-
-// TODO: finish CSS
 
 function createExcludeField(config){
     var field = document.createElement('input');
